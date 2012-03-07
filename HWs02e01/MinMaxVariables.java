@@ -1,10 +1,5 @@
-package minmaxvariables;
-
-
 public class MinMaxVariables {
-
-    
-    public static void main(String[] args) {
+public static void main(String[] args) {
        byte maximumByte = Byte.MAX_VALUE;
         short maximumShort = Short.MAX_VALUE;
         int maximumInteger = Integer.MAX_VALUE;
@@ -21,19 +16,13 @@ public class MinMaxVariables {
         float minimumFloat = Float.MIN_VALUE;
         double minimumDouble = Double.MIN_VALUE;
         
-        System.out.println("Byte "
-                           + maximumByte + " " + minimumByte);
-        System.out.println("Short "
-                           + maximumShort + " " + minimumShort);
-        System.out.println("Integer "
-                           + maximumInteger + " " + minimumInteger);
-        System.out.println("Long "
-                           + maximumLong + " " + minimumLong);
+        System.out.println("Byte " + maximumByte + " " + minimumByte);
+        System.out.println("Short " + maximumShort + " " + minimumShort);
+        System.out.println("Integer " + maximumInteger + " " + minimumInteger);
+        System.out.println("Long " + maximumLong + " " + minimumLong);
  
-        System.out.println("Float "
-                           + maximumFloat + " " + minimumFloat);
-        System.out.println("Double "
-                           + maximumDouble + " " + minimumDouble);
+        System.out.println("Float " + maximumFloat + " " + minimumFloat);
+        System.out.println("Double " + maximumDouble + " " + minimumDouble);
  
     }
 }
