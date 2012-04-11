@@ -1,0 +1,56 @@
+﻿public class Node {
+private int inf;                    
+    private Node next;     
+
+    Node() {
+        inf=0;
+        next=null;
+    }
+    Node(int i) {
+        inf=i;
+        next=null;
+    }
+
+    public void setInf(int i) {
+        inf=i;
+    }
+    public void setNext(Node n) {
+        next=n;
+    }
+
+    public int getInf() {
+        return inf;
+    }
+    public Node getNext() {
+        return next;
+    }
+    public static void main(String[] args) {
+        Node head;         // Начало списка
+        Node previous;         // Предыдущий элемент
+        
+        // Создание первого элемента
+        previous = new Node();
+        previous.inf = 0;
+        previous.next = null;
+
+        // Создание и связывание элементов списка
+        for (int i = 1; i < 10; i++) {
+
+            // Создание нового элемента
+            head = new Node();
+
+            // Заполнение элемента данными
+            head.inf = i;
+
+            // Ссылка указывает на предыдущий элемент
+            head.next = previous;
+            head.next = head;
+            
+            
+            // Теперь текущий элемент считается за предыдущий
+            previous = head;
+        }
+    }
+    
+}
+    

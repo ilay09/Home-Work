@@ -1,0 +1,52 @@
+public class Queue {
+
+    public Queue() {
+    }
+
+    public void add(Object obj) {
+        if (last == null) {
+            last = new Node();
+            last.inf = obj;
+            // last.next = null;
+            head = last;
+        } else {
+            Node newNode = new Node();
+            last.next = newNode;
+            newNode.inf = obj;
+            // newNode.next = null;
+            last = newNode;
+        }
+    }
+
+    public Object remove() {
+        if (head == null) {
+            throw new RuntimeException("Empty queue");
+        }
+        Object oldInf = head.inf;
+        head = head.next;
+        if (head == null) {
+            last = null;
+        }
+        return oldInf;
+    }
+    
+    public boolean isEmpty() {
+        return head == null;
+    }
+    
+    Node head;
+    Node last;
+
+    public static void main(String[] args) {
+        Queue q = new Queue();
+
+        for (int i = 0; i < 10; i++) {
+            System.out.println("Storing " + i + " in queue");
+            q.add(i);
+        }
+
+        while (!q.isEmpty()) {
+            System.out.println((Integer) q.remove());
+        }
+    }
+}
