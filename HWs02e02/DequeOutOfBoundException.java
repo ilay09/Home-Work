@@ -3,7 +3,5 @@ public class DequeOutOfBoundException extends RuntimeException {
 	public String getMessage(){
 		return ErrorMessage;
 	}
-        public static void main(String[] args) {
-		
-  }
+        
  }
